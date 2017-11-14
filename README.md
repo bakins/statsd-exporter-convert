@@ -1,6 +1,6 @@
 # statsd-exporter-convert
 
-`statsd-exporter-convert` assits with converting from the legacy text based [statsd_exporter](https://github.com/prometheus/statsd_exporter) configuration to the YAML based one.
+`statsd-exporter-convert` assists with converting from the legacy text based [statsd_exporter](https://github.com/prometheus/statsd_exporter) configuration to the YAML based one.
 
 ## Usage
 
