@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+NAME=statsd-exporter-convert
+ARCH=amd64
+
+for OS in linux darwin; do
+    CGO_ENABLED=0 GOOS=${OS} GOARCH=${ARCH} go build -o ${NAME}.${OS}.${ARCH} .
+done

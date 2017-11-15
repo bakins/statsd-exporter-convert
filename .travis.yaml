@@ -1,0 +1,18 @@
+language: go
+go:
+- 1.9.x
+notifications:
+  email: false
+install:
+- true
+script:
+- "./script/build"
+#deploy:
+#  provider: releases
+#  skip_cleanup: true
+ # file: 
+ # - statsd-exporter-convert.linux.amd64
+ # - statsd-exporter-convert.darwin.amd64
+ # on:
+ #   repo: bakins/statsd-exporter-convert
+ #   tags: true
