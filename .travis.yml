@@ -7,12 +7,14 @@ install:
 - true
 script:
 - "./script/build"
-#deploy:
-#  provider: releases
-#  skip_cleanup: true
- # file: 
- # - statsd-exporter-convert.linux.amd64
- # - statsd-exporter-convert.darwin.amd64
- # on:
- #   repo: bakins/statsd-exporter-convert
- #   tags: true
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: eBwq9GpQYTJewgWtm8WZ/4glCeHK9qIbXpFHwbmOxzaQv0SATR3QRNiWuzD3ZGM+H09RMr89nj8gN1d9AdtJDnffy7pd7bjL56cBKxuI9ROomtuU5QiZeP4yeT46BgavYXNUcL+0XBjkkpKnTNxBoiWh28U/0wjcScwGipG8NIkB4Anjlyabcvh7ahrNGlSiwqQDsQaOwQV+98xdzH15IArJ2VZrAGOMz6QIGpw+wqb1ItxxgeTTzua8N/hYHglzx49691E6gVaCtlzpyPqLEjVtVxh3xBqppWPVLO0ORw5oT2XNf9qLJcDM6gZ+pMx3b/c0CSNJCQiVqkNLta5yrLhjIPJ4+a1/Wz9mHBZFrpbi2jTnRRpN7DIcMQd8pH71SrFZ9lCnJRuJgPOI+Slwd9fLKHf1ijTYTEsSC1RkFyzEFphOar3utrnCU/Ngs+KXMYcU0dgIIZCTQM1YfpF7HsQVJ19/9a+Vx/C18T95R5RckGzc7ZHLd+ZiviHb0sEIgfzoz+wz/zeQeWzDVcG9KLOEj4mA5NOAP855mHqw0N1go4JPFwzKpns02GrGav8UqUi4GeE4DLTWbmqMFQOgdHZSmbkIaTw6POIJ3MfmHBaVnJYFSi505vJ2J3AgFbt9hjpmAsK72MaasOu1Wt05S7c+8FlJEab3YMWkiUjyYyE=
+  file:  
+  - statsd-exporter-convert.linux.amd64
+  - statsd-exporter-convert.darwin.amd64
+  on:
+    repo: bakins/statsd-exporter-convert
+    tags: true
