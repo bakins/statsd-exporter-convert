@@ -4,7 +4,7 @@
 
 ## Usage
 
-Clone this repository and build it using Go 1.9+.
+Clone this repository and build it using Go 1.9+. [Binary releases](https://github.com/bakins/statsd-exporter-convert/releases) are also available.
 
 Run it with a single file as the only argument:
 
