@@ -18,12 +18,13 @@ const (
 )
 
 var (
-	identifierRE   = `[a-zA-Z_][a-zA-Z0-9_]+`
-	statsdMetricRE = `[a-zA-Z_](-?[a-zA-Z0-9_])+`
+	identifierRE      = `[a-zA-Z_][a-zA-Z0-9_]+`
+	statsdMetricRE    = `[a-zA-Z_](-?[a-zA-Z0-9_])+`
+	templateReplaceRE = `(\$\{?\d+\}?)`
 
 	metricLineRE = regexp.MustCompile(`^(\*\.|` + statsdMetricRE + `\.)+(\*|` + statsdMetricRE + `)$`)
+	metricNameRE = regexp.MustCompile(`^([a-zA-Z_]|` + templateReplaceRE + `)([a-zA-Z0-9_]|` + templateReplaceRE + `)*$`)
 	labelLineRE  = regexp.MustCompile(`^(` + identifierRE + `)\s*=\s*"(.*)"$`)
-	metricNameRE = regexp.MustCompile(`^` + identifierRE + `$`)
 )
 
 type metricMapper struct {
